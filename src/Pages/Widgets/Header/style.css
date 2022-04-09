@@ -1,0 +1,45 @@
+/*   */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #c8eefd;
+    border: 2px solid rgba(0,0,0,.1);
+    z-index: 8;
+}
+header img{
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+/*   */
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav button{
+    width: 100px;
+    border: none;
+    background-color: transparent ;
+    font-size: 1.2em;
+    font-family: 'Permanent Marker', cursive;
+    color: rgba(0,0,0,.7);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.4s;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header nav button:hover{
+    box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    font-size: 1.4em;
+}
