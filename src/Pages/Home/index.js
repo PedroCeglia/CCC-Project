@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./style.css"
 
+// Import React Router Dom
+import { Link, Navigate, useNavigate } from 'react-router-dom'
+import Header from '../Widgets/Header'
+
 export default function Home(){
+
+    // Get Navigate
+    const navigate = useNavigate();
+
+    // Get Items List 
+    const [itensList, setItensList] = useState([])
+    useEffect(()=>{
+        const lista = [{
+            nome: "entrar",
+            function: ()=>{
+                navigate("login")
+            }
+        }]
+        setItensList(lista)
+    },[])
+
     return(
         <div className='home-container'>
-            <header>
-                <img src="assets/ccc-logo.png"/>
-            </header>
+            <Header itensList={itensList}/>
             <section>
                 <h2>Conheça o Rio de Janeiro com outro olhar</h2>
                 <img src='assets/ccc-image-6.png' alt='image 6'/>
@@ -56,6 +74,31 @@ export default function Home(){
                     Localização :  
                     <a href='https://goo.gl/maps/ZuX7REQzbPrYXmiU6'>55, Al. Floriano Peixoto, 13 - Urca, Rio de Janeiro - Brasil</a>
                 </p>
+            </article>
+            <section>
+                <img src='assets/ccc-image-3.png' alt='image 3'/>
+            </section>
+            <article>
+                <h2>Contato</h2>
+                <div className='sobre-container'>
+                    <div className='image-container'>
+                        <img src="assets/ccc-image-1.png" alt="image 1"/>                        
+                        <img src="assets/ccc-image-2.png" alt="image 2"/>                        
+                    </div>
+                    <p className='paragraph-main'>
+
+                        <p>
+                            Caso tenha interesse em se juntar ao CCC, entre em contato conosco 
+                            a partir do nosso e-mail.
+                        </p> 
+                        <p>
+                            e-mail : 
+                            <a href="mailto:contato@clubecariocadecanoagem.com.br">
+                                contato@clubecariocadecanoagem.com.br
+                            </a> 
+                        </p>
+                    </p>
+                </div>
             </article>
         </div>
     )
