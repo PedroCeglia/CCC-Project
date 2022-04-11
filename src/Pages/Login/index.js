@@ -1,18 +1,27 @@
 import React from "react";
 import "./style.css"
 
-// Import React Router Dom
-import { Link } from "react-router-dom";
+// Import React ROuter DOm
+import { useNavigate } from "react-router-dom";
+
+// Import Widgets
+import Header from '../Widgets/Header'
 
 export default function Login(){
+
+    // Get Use Navigate
+    const navigate = useNavigate();
+
+    const itensList = [{
+        nome:"voltar",
+        function:()=>{
+            navigate("/")
+        }
+    }]
+
     return(
         <div className="login-container">
-            <header className='isntLog'>
-                <Link to="/"><img src="assets/ccc-logo.png" alt="logo-image"/></Link>
-                <nav className='isntLog'>
-                    <Link to="/">Voltar</Link>
-                </nav>
-            </header>
+            <Header itensList = {itensList}/>
             <section>
                 <img src="assets/ccc-image-9.png" alt="image 9"/>
                 <article className="login-area">

@@ -7,64 +7,6 @@
     width: 100%;
     background-color: #176da1;
 }
-
-/*   */
-.login-container header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: #c8eefd;
-    border: 2px solid rgba(0,0,0,.1);
-    z-index: 8;
-}
-.login-container header img{
-    width: 100px;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
-/*   */
-.login-container header.isntLog nav.isntLog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.login-container header.isntLog nav.isntLog a{
-    width: 100px;
-    border: none;
-    background-color: transparent ;
-    font-size: 1.2em;
-    font-family: 'Permanent Marker', cursive;
-    color: rgba(0,0,0,.7);
-    cursor: pointer;
-    margin-right: 20px;
-    transition: all 0.4s;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-
-}
-.login-container header.isntLog nav.isntLog a:hover{
-    box-shadow: 2px 2px 4px rgba(0,0,0,.1);
-    font-size: 1.4em;
-}
-
-
-/*   */
-.login-container header.isntLog nav.isLog{
-    display: none;
-}
-.login-container header.isLog nav.isntLog{
-    display: none;
-}
-
-
 /*   */
 .login-container section{
     background-color: #073f61 ;
