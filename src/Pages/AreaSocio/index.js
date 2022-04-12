@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './style.css'
 
 // Import React Router Dom
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Widgets/Header";
 
 
-export default function AreaSocio(){
+export default function AreaSocio(props){
 
     const navigate = useNavigate()
 
@@ -24,7 +24,14 @@ export default function AreaSocio(){
                 console.log("sair")
             }
         }
-    ]   
+    ]
+    
+    // Verify If User IS Log
+    useEffect(()=>{
+        if(props.user == null){
+            navigate('/')
+        }
+    },[props.user])
 
     const caiaqueList = [
         {name:"1-caiaque", src:'assets/caiaque-1.jpeg'},
@@ -37,7 +44,7 @@ export default function AreaSocio(){
 
     return(
         <div className="area-socio-container">
-            <Header itensList={itensList}/>
+            <Header itensList={itensList} user={props.user}/>
             <section>
                 <h2>Reserve um Caiaque</h2>
                 <div className="search-view">

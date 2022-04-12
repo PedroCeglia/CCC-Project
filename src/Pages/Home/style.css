@@ -111,7 +111,7 @@
     border-radius: 20px;
 
 }
-.home-container article .sobre-container p.paragraph-main{
+.home-container article .sobre-container div.paragraph-main{
     font-size: 1.6em;
     font-family: 'Kanit', sans-serif;
     width: 600px;
@@ -120,7 +120,7 @@
     justify-content: center;
     align-items: flex-start;
 }
-.home-container article .sobre-container p.paragraph-main p{
+.home-container article .sobre-container div.paragraph-main p{
     font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
     margin-bottom: 30px;

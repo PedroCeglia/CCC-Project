@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./style.css"
 
 // Import React ROuter DOm
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 // Import Widgets
 import Header from '../Widgets/Header'
 
-export default function CreateUser(){
+export default function CreateUser(props){
 
     // Get Use Navigate
     const navigate = useNavigate();
@@ -18,6 +18,13 @@ export default function CreateUser(){
             navigate("/")
         }
     }]
+
+    // Verify If User IS Log
+    useEffect(()=>{
+        if(props.user == null){
+            navigate('/')
+        }
+    },[props.user])
 
     return(
         <div className="login-container">
